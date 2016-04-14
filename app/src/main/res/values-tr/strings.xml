@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Yemek Menüsü</string>
+
+    <string name="action_about">Hakkında</string>
+
+    <string name="title_contact_developer">Geliştiriciye bağlan</string>
+    <string name="title_open_source_licenses">Açık kaynak lisansları</string>
+
+    <string name="error_connection_title">Bağlantı sorunu</string>
+    <string name="error_connection_subtitle">İnternet bağlantınız ile ilgili bir sorun var gibi</string>
+    <string name="error_unknown_title">Unknown error</string>
+    <string name="error_unknown_subtitle">Ah. Bilinmeyen bir hata oluştu. Tekrar deneyin?</string>
+    <string name="error_no_data_title">Veri yok</string>
+    <string name="error_no_data_subtitle">Kullanılabilir veri alınamadı. Lütfen daha sonra tekrar deneyin.\n\nEğer bu hata mesajını uzun süredir alıyorsanız yurt idaresine danışmayı düşünebilirsiniz.</string>
+
+    <string name="today">Bugün</string>
+    <string name="tomorrow">Yarın</string>
+    <string name="yesterday">Dün</string>
+</resources>

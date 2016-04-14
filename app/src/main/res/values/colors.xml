@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="apptheme_primary">#F44336</color>
+    <color name="apptheme_primary_dark">#D32F2F</color>
+    <color name="apptheme_primary_light">#EF9A9A</color>
+    <color name="apptheme_accent">#EEEEEE</color>
+    <color name="apptheme_window_background">#DDDDDD</color>
+    <color name="apptheme_text_primary">#616161</color>
+    <color name="apptheme_text_secondary">#9E9E9E</color>
+    <color name="apptheme_divider_solid">#B6B6B6</color>
+    <color name="apptheme_divider">#507a7a7a</color>
+    <color name="apptheme_divider_light">#307a7a7a</color>
+
+    <color name="selector_light">#50ffffff</color>
+    <color name="selector_light_stroke">#70ffffff</color>
+    <color name="selector_dark">#30000000</color>
+    <color name="selector_dark_stroke">#50000000</color>
+
+    <color name="shadow">#70000000</color>
+    <color name="shadow_light">#30000000</color>
+</resources>

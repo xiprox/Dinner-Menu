@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Dinner Menu</string>
+
+    <string name="action_about">About</string>
+    <string name="action_ok">OK</string>
+    <string name="action_cancel">Cancel</string>
+
+    <string name="title_contact_developer">Contact developer</string>
+    <string name="title_open_source_licenses">Open source licenses</string>
+
+    <string name="error_connection_title">Connection error</string>
+    <string name="error_connection_subtitle">There seems to be a problem with your internet connection</string>
+    <string name="error_unknown_title">Unknown error</string>
+    <string name="error_unknown_subtitle">Ugh. An error not yet known to us has occurred. Try again?</string>
+    <string name="error_no_data_title">No data</string>
+    <string name="error_no_data_subtitle">No data available. Please try again later.\n\nIf you have been seeing this error message for a long time now, you might want to see the administration for information.</string>
+
+    <string name="today">Today</string>
+    <string name="tomorrow">Tomorrow</string>
+    <string name="yesterday">Yesterday</string>
+</resources>
