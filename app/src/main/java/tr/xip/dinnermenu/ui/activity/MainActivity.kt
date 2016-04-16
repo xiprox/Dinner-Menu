@@ -66,6 +66,7 @@ class MainActivity : AppCompatActivity(), Callback<Menu> {
     }
 
     private fun fetchMenu() {
+        setAppBarElevation(0f)
         showButtons(false)
 
         flipper.safeSetDisplayedChild(FLIPPER_PROGRESS)
