@@ -108,6 +108,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
                     android:layout_marginTop="8dp"
+                    android:alpha="0.6"
                     android:gravity="center_horizontal"
                     android:textColor="@android:color/white"
                     tools:text="@string/error_no_data_subtitle" />
