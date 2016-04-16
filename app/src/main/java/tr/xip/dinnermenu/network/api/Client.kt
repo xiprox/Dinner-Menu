@@ -5,6 +5,7 @@ import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Call
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
+import tr.xip.dinnermenu.BuildConfig.DEBUG
 import tr.xip.dinnermenu.model.Menu
 
 object Client {
@@ -13,12 +14,15 @@ object Client {
     private var service: Service? = null
 
     fun init() {
-        val httpLoggingInterceptor = HttpLoggingInterceptor()
-        httpLoggingInterceptor.level = HttpLoggingInterceptor.Level.BODY
-        val client = OkHttpClient.Builder().addInterceptor(httpLoggingInterceptor).build()
+        val clientBuilder = OkHttpClient.Builder()
+        if (DEBUG) {
+            val httpLoggingInterceptor = HttpLoggingInterceptor()
+            httpLoggingInterceptor.level = HttpLoggingInterceptor.Level.BODY
+            clientBuilder.addInterceptor(httpLoggingInterceptor)
+        }
 
         var retrofit = Retrofit.Builder()
-                .client(client)
+                .client(clientBuilder.build())
                 .baseUrl(BASE_URL)
                 .addConverterFactory(GsonConverterFactory.create())
                 .build()
