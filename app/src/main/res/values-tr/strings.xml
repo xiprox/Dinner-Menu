@@ -5,6 +5,7 @@
     <string name="action_about">Hakkında</string>
     <string name="action_ok">OK</string>
     <string name="action_cancel">İptal</string>
+    <string name="action_retry">Tekrar dene</string>
 
     <string name="title_contact_developer">Geliştiriciye bağlan</string>
     <string name="title_open_source_licenses">Açık kaynak lisansları</string>

@@ -4,6 +4,7 @@
     <string name="action_about">About</string>
     <string name="action_ok">OK</string>
     <string name="action_cancel">Cancel</string>
+    <string name="action_retry">Retry</string>
 
     <string name="title_contact_developer">Contact developer</string>
     <string name="title_open_source_licenses">Open source licenses</string>

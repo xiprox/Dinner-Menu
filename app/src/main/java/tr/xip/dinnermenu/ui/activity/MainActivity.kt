@@ -54,6 +54,9 @@ class MainActivity : AppCompatActivity(), Callback<Menu> {
             goToToday()
             true
         }
+        retry.setOnClickListener {
+            fetchMenu()
+        }
         pager.addOnPageChangeListener(object : OnPageChangeListenerAdapter() {
             override fun onPageSelected(position: Int) = notifyPageSelected(position)
         })

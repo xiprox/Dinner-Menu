@@ -112,6 +112,19 @@
                     android:gravity="center_horizontal"
                     android:textColor="@android:color/white"
                     tools:text="@string/error_no_data_subtitle" />
+
+                <TextView
+                    android:id="@+id/retry"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/selector_light_rounded"
+                    android:fontFamily="sans-serif-medium"
+                    android:padding="8dp"
+                    android:text="@string/action_retry"
+                    android:textAllCaps="true"
+                    android:textColor="@android:color/white" />
             </LinearLayout>
         </FrameLayout>
     </ViewFlipper>
