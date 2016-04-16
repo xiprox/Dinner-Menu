@@ -140,12 +140,13 @@ class MainActivity : AppCompatActivity(), Callback<Menu> {
         var subtitle = getString(R.string.error_unknown_subtitle)
 
         if (throwable != null) {
-            /*
-            logw { "CAUSE: " + throwable.cause }
-            logw { "MESSAGE: " + throwable.message }
-            logw { "STACK: " + throwable.stackTrace }
-            */
-            // TODO: Proper Exception handling and errors
+            if (throwable.cause.toString().contains("GaiException")) {
+                image = R.drawable.es_no_connection
+                title = getString(R.string.error_connection_title)
+                subtitle = getString(R.string.error_connection_subtitle)
+            }
+
+            loge { "CAUSE: " + throwable.cause }
         }
 
         if (response != null) {
