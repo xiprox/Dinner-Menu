@@ -7,6 +7,6 @@ import tr.xip.dinnermenu.model.Menu
 
 interface Service {
 
-    @GET("/raw/LXe5ndZG")
-    fun getMenu(/*@Query("month") month: Int, @Query("year") year: Int*/): Call<Menu>
+    @GET("get")
+    fun getMenu(@Query("month") month: Int, @Query("year") year: Int): Call<Menu>
 }

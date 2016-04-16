@@ -8,7 +8,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 import tr.xip.dinnermenu.model.Menu
 
 object Client {
-    val BASE_URL = "http://pastebin.com"
+    val BASE_URL = "https://dinnermenu.xiprox.me/api/"
 
     private var service: Service? = null
 
@@ -28,7 +28,7 @@ object Client {
 
     fun getMenu(month: Int, year: Int): Call<Menu> {
         crashIfServiceNull()
-        return service!!.getMenu(/*month, year*/)
+        return service!!.getMenu(month, year)
     }
 
     fun crashIfServiceNull() {
