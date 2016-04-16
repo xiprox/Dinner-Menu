@@ -1,11 +1,15 @@
 package tr.xip.dinnermenu.ui.activity
 
+import android.animation.Animator
+import android.animation.AnimatorListenerAdapter
+import android.animation.ObjectAnimator
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 
 import android.os.Bundle
 import android.view.MenuItem
 import android.view.View
+import android.view.animation.DecelerateInterpolator
 import kotlinx.android.synthetic.main.activity_main.*
 import retrofit2.Call
 import retrofit2.Callback
@@ -59,6 +63,8 @@ class MainActivity : AppCompatActivity(), Callback<Menu> {
     }
 
     private fun fetchMenu() {
+        showButtons(false)
+
         flipper.safeSetDisplayedChild(FLIPPER_PROGRESS)
 
         val cal = Calendar.getInstance().toSimpleDate()
@@ -118,6 +124,8 @@ class MainActivity : AppCompatActivity(), Callback<Menu> {
         if (!fromCache) {
             Cache.saveMenu(menu)
         }
+
+        showButtons()
     }
 
     private fun fail(response: Response<Menu>? = null, throwable: Throwable? = null) {
@@ -144,6 +152,8 @@ class MainActivity : AppCompatActivity(), Callback<Menu> {
         errorSubtitle.text = subtitle
 
         flipper.safeSetDisplayedChild(FLIPPER_ERROR)
+
+        showButtons(false)
     }
 
     private fun showNoData() {
@@ -151,6 +161,7 @@ class MainActivity : AppCompatActivity(), Callback<Menu> {
         errorTitle.text = getString(R.string.error_no_data_title)
         errorSubtitle.text = getString(R.string.error_no_data_subtitle)
         flipper.safeSetDisplayedChild(FLIPPER_ERROR)
+        showButtons(false)
     }
 
     private fun goToToday() {
@@ -163,6 +174,22 @@ class MainActivity : AppCompatActivity(), Callback<Menu> {
                 }
             }
         }
+    }
+
+    private fun showButtons(show: Boolean = true) {
+        val animator = ObjectAnimator.ofFloat(appBarButtons, "y", if (show) 1f else 0f)
+        animator.duration = 400
+        animator.interpolator = DecelerateInterpolator()
+        animator.addListener(object : AnimatorListenerAdapter() {
+            override fun onAnimationEnd(animation: Animator?) {
+                if (!show) appBarButtons.visibility = View.GONE
+            }
+
+            override fun onAnimationStart(animation: Animator?) {
+                if (show) appBarButtons.visibility = View.VISIBLE
+            }
+        })
+        animator.start()
     }
 
     private fun notifyPageSelected(position: Int) {
