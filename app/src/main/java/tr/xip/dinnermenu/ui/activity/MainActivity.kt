@@ -99,10 +99,12 @@ class MainActivity : AppCompatActivity(), Callback<Menu> {
         var menu = response.body()
         if (response.isSuccessful && menu != null) success(menu)
         else fail(response = response)
+        notifyDataChanged()
     }
 
     override fun onFailure(call: Call<Menu>?, t: Throwable?) {
         fail(throwable = t)
+        notifyDataChanged()
     }
 
     private fun success(menu: Menu, fromCache: Boolean = false) {
@@ -219,6 +221,12 @@ class MainActivity : AppCompatActivity(), Callback<Menu> {
                 val format = SimpleDateFormat("d MMMM")
                 date.text = format.format(cal.toTimestamp())
             }
+        }
+    }
+
+    private fun notifyDataChanged() {
+        if (menu == null || menu?.days == null || menu?.days?.size == 0) {
+            setAppBarElevation(2.toPx(this).toFloat())
         }
     }
 
