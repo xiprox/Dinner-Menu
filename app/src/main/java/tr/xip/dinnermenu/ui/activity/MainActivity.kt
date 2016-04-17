@@ -1,15 +1,12 @@
 package tr.xip.dinnermenu.ui.activity
 
-import android.animation.Animator
-import android.animation.AnimatorListenerAdapter
-import android.animation.ObjectAnimator
+import android.animation.*
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 
 import android.os.Bundle
 import android.view.MenuItem
 import android.view.View
-import android.view.animation.DecelerateInterpolator
 import kotlinx.android.synthetic.main.activity_main.*
 import retrofit2.Call
 import retrofit2.Callback
@@ -63,6 +60,16 @@ class MainActivity : AppCompatActivity(), Callback<Menu> {
 
         /* Fetch data */
         fetchMenu()
+
+        /*
+                var i = 0
+                while (i < 10) {
+                    Handler().postDelayed({
+                        showButtons(i % 2 == 0)
+                    }, 2000)
+                    i++
+                }
+        */
     }
 
     private fun fetchMenu() {
@@ -82,7 +89,7 @@ class MainActivity : AppCompatActivity(), Callback<Menu> {
     }
 
     fun setAppBarElevation(elevation: Float) {
-        appbar.elevation = elevation
+        appBar.elevation = elevation
     }
 
     override fun onCreateOptionsMenu(optionsMenu: android.view.Menu): Boolean {
@@ -184,19 +191,7 @@ class MainActivity : AppCompatActivity(), Callback<Menu> {
     }
 
     private fun showButtons(show: Boolean = true) {
-        val animator = ObjectAnimator.ofFloat(appBarButtons, "y", if (show) 1f else 0f)
-        animator.duration = 400
-        animator.interpolator = DecelerateInterpolator()
-        animator.addListener(object : AnimatorListenerAdapter() {
-            override fun onAnimationEnd(animation: Animator?) {
-                if (!show) appBarButtons.visibility = View.GONE
-            }
-
-            override fun onAnimationStart(animation: Animator?) {
-                if (show) appBarButtons.visibility = View.VISIBLE
-            }
-        })
-        animator.start()
+        appBarButtons.visibility = if (show) View.VISIBLE else View.GONE
     }
 
     private fun notifyPageSelected(position: Int) {

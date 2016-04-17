@@ -8,9 +8,10 @@
     tools:context=".ui.activity.MainActivity">
 
     <android.support.design.widget.AppBarLayout
-        android:id="@+id/appbar"
+        android:id="@+id/appBar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:animateLayoutChanges="true"
         android:theme="@style/AppTheme.AppBarOverlay"
         app:elevation="0dp">
 
