@@ -47,9 +47,8 @@ class MainActivity : AppCompatActivity(), Callback<Menu> {
             pager.currentItem = 0
             true
         }
-        date.setOnLongClickListener {
+        date.setOnClickListener {
             goToToday()
-            true
         }
         retry.setOnClickListener {
             fetchMenu()
