@@ -8,6 +8,7 @@
 
     <string name="title_contact_developer">Contact developer</string>
     <string name="title_open_source_licenses">Open source licenses</string>
+    <string name="title_source_code">Source code</string>
 
     <string name="error_connection_title">Connection error</string>
     <string name="error_connection_subtitle">There seems to be a problem with your internet connection</string>

@@ -35,6 +35,12 @@ class AboutActivity : AppCompatActivity() {
             startActivity(Intent.createChooser(intent, getString(R.string.title_contact_developer)))
         }
 
+        /* Source code */
+        sourceCode.setOnClickListener {
+            val intent = Intent(Intent.ACTION_VIEW,  Uri.parse("https://github.com/xiprox/Dinner-Menu"))
+            startActivity(intent)
+        }
+
         /* Open source licenses dialog */
         openSourceLicenses.setOnClickListener {
             val view = layoutInflater.inflate(R.layout.view_webview, null)

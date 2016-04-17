@@ -9,6 +9,7 @@
 
     <string name="title_contact_developer">Geliştiriciye bağlan</string>
     <string name="title_open_source_licenses">Açık kaynak lisansları</string>
+    <string name="title_source_code">Kaynak kodu</string>
 
     <string name="error_connection_title">Bağlantı sorunu</string>
     <string name="error_connection_subtitle">İnternet bağlantınız ile ilgili bir sorun var gibi</string>

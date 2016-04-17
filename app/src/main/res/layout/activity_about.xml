@@ -52,6 +52,16 @@
             android:textSize="18sp" />
 
         <TextView
+            android:id="@+id/sourceCode"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@drawable/selector_dark"
+            android:gravity="center_vertical"
+            android:padding="12dp"
+            android:text="@string/title_source_code"
+            android:textSize="18sp" />
+
+        <TextView
             android:id="@+id/openSourceLicenses"
             android:layout_width="match_parent"
             android:layout_height="48dp"
