@@ -1,9 +1,7 @@
 # Dinner Menu
-Dinner menu app for Gediz University Dormitory
+Dinner menu app for the Gediz University Dormitories
 
-<p align="center">
-<img src="/graphics/screenshot/1.png" /> <img src="/graphics/screenshot/2.png" />
-</p>
+![](/graphics/play_store/feature_graphic.png)
 
 ## License
 GPL v3 (See [LICENSE](/LICENSE))
