@@ -27,8 +27,7 @@ class AboutActivity : AppCompatActivity() {
         }
 
         /* Feedback */
-        val contanctDeveloper = findViewById(R.id.contactDeveloper)
-        contanctDeveloper.setOnClickListener {
+        contactDeveloper.setOnClickListener {
             val intent = Intent(Intent.ACTION_SENDTO, Uri.fromParts(
                     "mailto", "x.ihsan@gmail.com", null))
             val addresses = arrayOf("x.ihsan@gmail.com")
