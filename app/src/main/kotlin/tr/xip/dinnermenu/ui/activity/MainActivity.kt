@@ -7,6 +7,8 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
 import android.view.View
+import com.crashlytics.android.answers.Answers
+import com.crashlytics.android.answers.ContentViewEvent
 import kotlinx.android.synthetic.main.activity_main.*
 import retrofit2.Call
 import retrofit2.Callback
@@ -85,6 +87,16 @@ class MainActivity : AppCompatActivity(), Callback<Menu> {
         } else {
             Client.getMenu(cal.getMonth(), cal.getYear()).enqueue(this)
         }
+
+        /* Log to Answers */
+        Answers.getInstance().logContentView(
+                ContentViewEvent()
+                        .putContentId("1")
+                        .putContentType("Fetch")
+                        .putContentName("Fetch Menu")
+                        .putCustomAttribute("Month Param", cal.getMonth())
+                        .putCustomAttribute("Year Param", cal.getYear())
+        )
     }
 
     fun setAppBarElevation(elevation: Float) {
