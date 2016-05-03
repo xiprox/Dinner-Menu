@@ -5,6 +5,7 @@ import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 
 import android.os.Bundle
+import android.support.v4.view.ViewCompat
 import android.view.MenuItem
 import android.view.View
 import com.crashlytics.android.answers.Answers
@@ -90,7 +91,7 @@ class MainActivity : AppCompatActivity(), Callback<Menu> {
     }
 
     fun setAppBarElevation(elevation: Float) {
-        appBar.elevation = elevation
+        ViewCompat.setElevation(appBar, elevation)
     }
 
     override fun onCreateOptionsMenu(optionsMenu: android.view.Menu): Boolean {
