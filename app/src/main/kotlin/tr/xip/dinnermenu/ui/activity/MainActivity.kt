@@ -61,16 +61,6 @@ class MainActivity : AppCompatActivity(), Callback<Menu> {
 
         /* Fetch data */
         fetchMenu()
-
-        /*
-                var i = 0
-                while (i < 10) {
-                    Handler().postDelayed({
-                        showButtons(i % 2 == 0)
-                    }, 2000)
-                    i++
-                }
-        */
     }
 
     private fun fetchMenu() {
