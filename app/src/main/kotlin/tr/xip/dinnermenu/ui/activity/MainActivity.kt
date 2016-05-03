@@ -186,6 +186,9 @@ class MainActivity : AppCompatActivity(), Callback<Menu> {
             for ((index, value) in adapter!!.days!!.withIndex()) {
                 if (value.day == today) {
                     pager.currentItem = index
+                    if (index == 0) {
+                        notifyPageSelected(index) // need to manually notify
+                    }
                     break
                 }
             }
